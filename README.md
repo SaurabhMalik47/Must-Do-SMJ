@@ -1,13 +1,13 @@
 # Data Structure and Algorithms
-01. Arrays<br>
-02. String<br>
-03. Linked List<br>
-04. Stack and Queue<br>
-05. Tree and BST<br>
-06. Heap<br>
-07. Hashing<br>
-08. Graph<br>
-09. Greedy<br>
+1. Arrays<br>
+2. String<br>
+3. Linked List<br>
+4. Stack and Queue<br>
+5. Tree and BST<br>
+6. Heap<br>
+7. Hashing<br>
+8. Graph<br>
+9. Greedy<br>
 10. Dynamic Programming<br>
 11. Divide and Conquer<br>
 12. Backtracking<br>
