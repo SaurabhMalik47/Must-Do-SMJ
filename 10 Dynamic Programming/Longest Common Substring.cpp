@@ -29,7 +29,7 @@ The idea is to find length of the longest common suffix for all substrings of bo
 
 
 /****************************** Time Complexity : O(m*n) and Space Complexity : O(m*n) ******************************/
-int LongestCommonString(string X, string Y, int m, int n)
+int LongestCommonString(string s1, string s2, int m, int n)
 {
    int dp[m+1][n+1];
    int ans = 0;
@@ -41,7 +41,7 @@ int LongestCommonString(string X, string Y, int m, int n)
         if(i == 0 || j == 0)
           dp[i][j] = 0;
           
-        else if(X[i-1] == Y[j-1])
+        else if(s1[i-1] == s2[j-1])
         {
           dp[i][j] = dp[i-1][j-1] + 1;
           ans = max(ans, dp[i][j]);
