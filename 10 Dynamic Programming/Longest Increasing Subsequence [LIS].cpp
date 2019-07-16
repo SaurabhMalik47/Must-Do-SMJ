@@ -17,7 +17,7 @@ Output:
 */
 
 /****************************** Time Complexity : O(n^2) and Space Complexity : O(n) ******************************/
-int findLIS(int a[], int n)
+int LongestIncreasingSubsequence(int a[], int n)
 {
     int dp[n];
     for(int i=0; i<n; i++)
@@ -40,7 +40,7 @@ int findLIS(int a[], int n)
     }
     return maxLength;
 }
-/****************************** Time Complexity : O(n) and Space Complexity : O(n) ******************************/
+/****************************** Time Complexity : O(n*logn) and Space Complexity : O(n) ******************************/
 // Patience Sorting Algorithm
 
 
