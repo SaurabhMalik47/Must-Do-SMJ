@@ -40,3 +40,18 @@ int findLIS(int a[], int n)
     }
     return maxLength;
 }
+/****************************** Time Complexity : O(n) and Space Complexity : O(n) ******************************/
+// Patience Sorting Algorithm
+
+
+
+
+
+
+
+
+
+
+
+
+
