@@ -33,7 +33,7 @@ class val
 
 bool compare(val v1, val v2)
 {
-        return (v1.second < v2.second);
+    return (v1.second < v2.second);
 }
 
 int maxChainLen(class val a[], int n)
@@ -53,13 +53,13 @@ int maxChainLen(class val a[], int n)
 
 int main() 
 {
-		int n;
-		cin>>n;
-		val a[n];
-		for(int i=0; i<n; i++)
-    {
-			cin>>a[i].first>>a[i].second;
-    }
-	cout<<maxChainLen(a, n)<<endl;
-	return 0;
+   int n;
+   cin>>n;
+   val a[n];
+   for(int i=0; i<n; i++)
+   {
+      cin>>a[i].first>>a[i].second;
+   }
+   cout<<maxChainLen(a, n)<<endl;
+   return 0;
 }
