@@ -32,11 +32,11 @@ int MaximumCuttedSegments(int n, int x, int y, int z)
         if(dp[i] != -1)
         {
             if(i+x <= n)
-				       dp[i+x] = max(dp[i]+1, dp[i+x]);
-		        if(i+y <= n)
-		           dp[i+y] = max(dp[i]+1, dp[i+y]);
-		        if(i+z <= n)    
-		           dp[i+z] = max(dp[i]+1, dp[i+z]);
+		dp[i+x] = max(dp[i]+1, dp[i+x]);
+	    if(i+y <= n)
+		dp[i+y] = max(dp[i]+1, dp[i+y]);
+	    if(i+z <= n)    
+		dp[i+z] = max(dp[i]+1, dp[i+z]);
         }
     }
     return dp[n];
