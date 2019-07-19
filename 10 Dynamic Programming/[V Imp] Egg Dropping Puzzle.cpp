@@ -43,7 +43,7 @@ int EggDropping(int n, int k)
 			} 
 		} 
 	} 
-	return dp[n][k]; 
+	return dp[n][k];
 }
 
 
