@@ -13,7 +13,7 @@ Output:
 
 
 
-/****************************** Time Complexity : O(n^2) and Space Complexity : O(n) ******************************/
+/****************************** Time Complexity : O(n) and Space Complexity : O(n) ******************************/
 int FindNthUglyNumber(int n)
 {
     int ugly[n];
