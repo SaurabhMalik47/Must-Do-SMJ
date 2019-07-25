@@ -18,9 +18,9 @@ Output:
 
 /****************************** Time Complexity : O(n + klogn) and Space Complexity : O(1) ******************************/
 
-int KthSmallestElement(int *a, int n, int k)
+int KthSmallestElement(int a[], int n, int k)
 {
-    priority_queue<int, vector<int>, greater <int> > pq;           //Min Heap
+    priority_queue<int, vector<int>, greater <int> > pq;           // Min Heap
     
     for(int i=0; i<n; i++)
         pq.push(a[i]);
@@ -29,4 +29,19 @@ int KthSmallestElement(int *a, int n, int k)
         pq.pop();
         
     return pq.top();
+}
+
+
+/****************************** Time Complexity : O(n + klogn) and Space Complexity : O(1) ******************************/
+
+int KthLargestElement(int a[], int n, int k)
+{
+    priority_queue <int> pq;          // Max Heap
+    for(int i = 0 ; i < n ; i++)
+       pq.push(a[i]);
+    
+    for(int i=0; i<k-1; i++)
+       pq.pop();
+    
+    return pq.top();   
 }
