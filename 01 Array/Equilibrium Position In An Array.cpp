@@ -19,7 +19,7 @@ Testcase 1: Since its the only element hence its the only equilibrium point.
 Testcase 2: For second test case equilibrium point is at position 3 as elements below it (1+3) = elements after it (2+2).
 
 
-/****************************** Time Complexity : O(n^2) and Space Complexity : O(n) ******************************/
+/****************************** Time Complexity : O(n) and Space Complexity : O(n) ******************************/
 
 int EquilibriumPosition(int a[], int n)
 {
