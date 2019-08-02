@@ -57,29 +57,28 @@ void EvaluatePostfixExpression(string str)
    stack<int> s;
    for(int i=0; i<str.size(); i++)
    {
-	   if(str[i]!='*' && str[i]!='+' && str[i]!='-' && str[i]!='/')
-	   {
-	       s.push(str[i] - '0');
-	   }
+	if(str[i]!='*' && str[i]!='+' && str[i]!='-' && str[i]!='/')
+	{
+	    s.push(str[i] - '0');
+	}
 	 
-	   else
-	   {
-	       int a = s.top();
-	       s.pop();
+	else
+	{
+	    int a = s.top();
+	    s.pop();
 	       
-	       int b = s.top();
-	       s.pop();
+	    int b = s.top();
+	    s.pop();
 	       
-	       if(str[i] == '+') 
-	          s.push(a+b);
-	       if(str[i] == '*') 
-	          s.push(a*b);
-	       if(str[i] == '-') 
-	          s.push(b-a);
-	       if(str[i] == '/') 
-	          s.push(b/a);
-	    }
-   }
-   
+	    if(str[i] == '+') 
+	       s.push(a+b);
+	    if(str[i] == '*') 
+	       s.push(a*b);
+	    if(str[i] == '-') 
+	       s.push(b-a);
+	    if(str[i] == '/') 
+	       s.push(b/a);
+	 }
+   }  
    cout << s.top() << endl;
 }
