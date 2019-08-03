@@ -13,10 +13,12 @@ where,
 Input:
 httpsunrux
 ftphttprururu
+httprrur
 
 Output:
 http://sun.ru/x
 ftp://http.ru/ruru
+http://r.ru/r
 
 
 /****************************** Time Complexity : O(n) and Space Complexity : O(1) ******************************/
@@ -31,7 +33,7 @@ int getRest(string s, int i)
      return -1; 
 }
 
-void InternetAddress(string s) 
+void internetAddress(string s) 
 {
      int starter, pos;
     
@@ -39,19 +41,20 @@ void InternetAddress(string s)
      { 
           cout<<"http://"; 
           starter = 3; 
-          pos = getRest(s,3);
+          pos = getRest(s, 3);
+          cout << s.substr(starter+1, starter+pos-3);
      } 
     
      else 
      { 
          cout<<"ftp://";
          starter = 2;
-         pos = getRest(s,2);
+         pos = getRest(s, 2);
+         cout << s.substr(starter+1, starter+pos-2);
      } 
     
-     cout << s.substring(starter+1, starter+pos-1);
      cout << ".ru"; 
      pos = starter + pos + 2; 
      cout << "/"; 
-     cout << s.substring(pos+1);
-} 
+     cout << s.substr(pos+1);
+}
