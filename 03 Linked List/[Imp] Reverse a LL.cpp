@@ -43,7 +43,7 @@ Node* ReverseLL(Node *head)
   if(head == NULL || head->next == NULL)
     return head;
   
-  Node* ans = reverseList(head->next);
+  Node* ans = reverseLL(head->next);
   
   head->next->next = head;
   head->next = NULL; 
