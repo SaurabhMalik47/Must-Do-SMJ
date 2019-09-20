@@ -9,22 +9,20 @@ int N; // total no of fishing spots
 int visited[MAX]; // occupied fishing spots 
 int Answer; // result 
 
-class GFG 
+class FISH
 { 
-public : 
-void reset_fishspot(int index) 
-{ 
-	int i; 
-	for (i = 1; i <= N; i++) 
-		if (fishspot[i] == index + 1) 
-			fishspot[i] = 0; 
-} 
+    public : 
+    void reset_fishspot(int index) 
+    {  
+	    for(int i=1; i<=N; i++) 
+		    if (fishspot[i] == index + 1) 
+			    fishspot[i] = 0; 
+    } 
 
 int calculate_distance(int index, int*pos1, int *pos2, int *score) 
 { 
 	int i, sum = 0, left_min = 999999, right_min = 999999, left, right, npos = 0; 
 	*pos1 = *pos2 = *score = 0; 
-
 	left = right = gate[index]; 
 
 	for (i = 1; i < fishermen[index]; i++) 
@@ -41,8 +39,7 @@ int calculate_distance(int index, int*pos1, int *pos2, int *score)
 			while ((left > 0) && (fishspot[left] > 0)) 
 				left--; 
 
-			while ((right <= N) && 
-				(fishspot[right] > 0)) 
+			while ((right <= N) && (fishspot[right] > 0)) 
 				right++; 
 
 			if ((left > 0) && (fishspot[left] == 0)) 
@@ -106,15 +103,13 @@ int calculate_distance(int index, int*pos1, int *pos2, int *score)
 		*pos2 = right; 
 		*score = sum + left_min; 
 	} 
-	else if ((sum + left_min) > 
-			(sum + right_min)) 
+	else if ((sum + left_min) > (sum + right_min)) 
 	{ 
 		npos = 1; 
 		*score = sum + right_min; 
 		fishspot[right] = index + 1; 
 	} 
-	else if ((sum + left_min) < 
-			(sum + right_min)) 
+	else if ((sum + left_min) < (sum + right_min)) 
 	{ 
 		npos = 1; 
 		*score = sum + left_min; 
@@ -132,8 +127,7 @@ void solve(int index, int sum, int count)
 	if (sum > Answer) 
 		return; 
 
-	npos = calculate_distance(index, &pos1, 
-							&pos2, &score); 
+	npos = calculate_distance(index, &pos1, &pos2, &score); 
 	sum += score; 
 
 	if (count == MAX) 
@@ -187,7 +181,7 @@ void solve(int index, int sum, int count)
 }; 
 int main()
 { 
-        GFG g;
+        FISH f;
         int i; 
         cin >> N;
         
@@ -206,9 +200,9 @@ int main()
   
         for (i = 0; i < MAX; i++) 
         { 
-            g.solve(i, 0, 1); 
+            f.solve(i, 0, 1); 
             visited[i] = 0; 
-            g.reset_fishspot(i); 
+            f.reset_fishspot(i); 
         } 
   
        cout << Answer << endl;
@@ -219,15 +213,12 @@ int main()
 
 
 
-
-
-
-
-
-Sample Input:
+/*
+Sample Input: 
 10
 4 6 10
 5 2 2
-  
+
 Sample Output:
 18
+*/
