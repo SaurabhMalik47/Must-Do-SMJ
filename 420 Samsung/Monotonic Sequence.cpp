@@ -24,7 +24,7 @@ ll getPositionInSeries(ll a, ll b, ll c, ll k)
 	} 
 	ll ans = 0; 
 
-    // Biary Search 
+    // Binary Search 
 	while (start <= end) 
     { 
 		ll mid = (start + end) / 2; 
