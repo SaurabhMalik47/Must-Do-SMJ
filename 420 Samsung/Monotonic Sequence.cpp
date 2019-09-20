@@ -8,8 +8,8 @@ using namespace std;
 ll func(ll a, ll b, ll c, ll n) 
 { 
 	ll res = a * n; 
-	ll logVlaue = floor(log2(n)); 
-	res += b * n * logVlaue; 
+	ll logValue = floor(log2(n)); 
+	res += b * n * logValue; 
 	res += c * (n * n * n); 
 	return res; 
 } 
